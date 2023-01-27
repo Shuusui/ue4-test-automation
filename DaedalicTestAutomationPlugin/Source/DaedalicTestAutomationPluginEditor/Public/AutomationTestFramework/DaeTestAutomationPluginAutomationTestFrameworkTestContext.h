@@ -8,7 +8,7 @@ class ADaeTestSuiteActor;
 class FDaeTestAutomationPluginAutomationTestFrameworkTestContext
 {
 public:
-    ADaeTestSuiteActor* CurrentTestSuite;
+    TWeakObjectPtr<ADaeTestSuiteActor> CurrentTestSuite;
     TMap<FString, FString> OldConsoleVariables;
 
     FDaeTestAutomationPluginAutomationTestFrameworkTestContext();

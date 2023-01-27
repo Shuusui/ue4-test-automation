@@ -18,7 +18,7 @@ bool FDaeTestAutomationPluginWaitForEndOfTestSuite::Update()
         return false;
     }
 
-    if (!Context.CurrentTestSuite)
+    if (!Context.CurrentTestSuite.IsValid())
     {
         for (TActorIterator<ADaeTestSuiteActor> Iter(GEditor->PlayWorld); Iter; ++Iter)
         {
@@ -26,7 +26,7 @@ bool FDaeTestAutomationPluginWaitForEndOfTestSuite::Update()
         }
     }
 
-    if (Context.CurrentTestSuite)
+    if (Context.CurrentTestSuite.IsValid())
     {
         return !Context.CurrentTestSuite->IsRunning();
     }

@@ -7,6 +7,7 @@ namespace UnrealBuildTool.Rules
 		public DaedalicTestAutomationPluginEditor(ReadOnlyTargetRules Target) : base(Target)
 		{
             PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+			ShortName = "DTAEditor";
 
 			PublicIncludePaths.AddRange(
 				new string[] {

@@ -136,7 +136,7 @@ void FDaeTestReportWriterPerformance::WriteReport(const TArray<FDaeTestSuiteResu
 
 FString FDaeTestReportWriterPerformance::FormatTime(float Time) const
 {
-    return UKismetTextLibrary::Conv_FloatToText(Time, ERoundingMode::HalfToEven, false, false, 1,
+    return UKismetTextLibrary::Conv_DoubleToText(Time, ERoundingMode::HalfToEven, false, false, 1,
                                                 324, 2, 2)
         .ToString();
 }

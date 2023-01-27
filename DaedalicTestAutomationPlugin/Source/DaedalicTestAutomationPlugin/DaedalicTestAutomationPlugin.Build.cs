@@ -7,6 +7,7 @@ namespace UnrealBuildTool.Rules
 		public DaedalicTestAutomationPlugin(ReadOnlyTargetRules Target) : base(Target)
 		{
             PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+			ShortName = "DTA";
 
 			PublicIncludePaths.AddRange(
 				new string[] {

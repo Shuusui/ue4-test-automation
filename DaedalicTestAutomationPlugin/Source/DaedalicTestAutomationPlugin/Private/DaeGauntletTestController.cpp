@@ -15,6 +15,16 @@ void UDaeGauntletTestController::OnInit()
 {
     Super::OnInit();
 
+	FString Value = ParseCommandLineOption("WaitForDebugger");
+
+	if (Value.ToLower() == "true")
+	{
+		while(!FPlatformMisc::IsDebuggerPresent())
+		{
+			FPlatformProcess::Sleep(1);
+		}
+	}
+
     // Get tests path.
     const UDaeTestAutomationPluginSettings* TestAutomationPluginSettings =
         GetDefault<UDaeTestAutomationPluginSettings>();

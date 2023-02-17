@@ -49,6 +49,12 @@ namespace UnrealBuildTool.Rules
 					// ... add any modules that your module loads dynamically here ...
 				}
 				);
+			string ReportPath = "$(PluginDir)/Content/ReportTemplates/";
+			RuntimeDependencies.Add($"{ReportPath}bootstrap.min.css");
+			RuntimeDependencies.Add($"{ReportPath}PerformanceReport.template.html");
+			RuntimeDependencies.Add($"{ReportPath}PerformanceReportBudgetViolation.template.html");
+			RuntimeDependencies.Add($"{ReportPath}PerformanceReportMap.template.html");
+
 		}
 	}
 }
